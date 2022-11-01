@@ -1,7 +1,6 @@
 import { CardSkeleton } from '../atoms/Skeletons';
 import useGetPokeData from '../../hooks/useGetPokeData';
 import { cutUrl } from '../../helpers/cutUrl.helper';
-import unknownImg from '/public/img/unknown-pokemon.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -28,13 +27,16 @@ const PokeCard = ({ pokeUrl }) => {
 						sprites.front_default !== null ? '' : 'opacity-20'
 					} w-full hover:scale-110 transition-all p-2 max-w-xs`}
 					src={
-						sprites.front_default !== null ? sprites.front_default : unknownImg
+						sprites.front_default !== null
+							? sprites.front_default
+							: '/img/unknown-pokemon.png'
 					}
 					width="200"
 					height="200"
 					alt="Pokemon image"
 					blurDataURL="URL"
 					placeholder="blur"
+					priority={true}
 				/>
 			</div>
 

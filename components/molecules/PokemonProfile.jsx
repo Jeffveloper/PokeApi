@@ -1,9 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import capitalizeCase from '../../helpers/Capitalize.helper';
 import { LoadingScreen } from '../atoms/LoadingScreen';
-import unknownImg from '/public/img/unknown-pokemon.png';
 
 export const PokemonProfile = ({ data }) => {
 	const router = useRouter();
@@ -61,7 +59,9 @@ export const PokemonProfile = ({ data }) => {
 					sprites.front_default !== null ? '' : 'opacity-20'
 				} w-full min-w-[150px] max-w-[320px] hover:scale-110 transition-all m-auto px-2 py-4`}
 				src={
-					sprites.front_default !== null ? sprites.front_default : unknownImg
+					sprites.front_default !== null
+						? sprites.front_default
+						: '/img/unknown-pokemon.png'
 				}
 				width="170"
 				height="170"

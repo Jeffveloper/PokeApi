@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
-import NotFoundImage from '/public/img/Notfound.png';
 
 export const NotFound = ({
 	message = 'oops!, parece que no se encontro lo que buscabas',
@@ -8,7 +6,7 @@ export const NotFound = ({
 	return (
 		<div className="flex flex-col items-center justify-center gap-5 w-full h-screen">
 			<Image
-				src={NotFoundImage}
+				src="/img/NotFound.png"
 				alt="Pokeapi Icon"
 				width="259"
 				height="215"

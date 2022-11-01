@@ -6,18 +6,21 @@ const useGetPokeData = (customUrl) => {
 	const { currentPage } = useCurrentPageContext();
 	const [pokeData, setPokeData] = useState([]);
 
-	if (customUrl === '?offset=NaN&limit=20') {
-		useEffect(() => {
-			setPokeData('pageErr');
-		}, [customUrl]);
-		return pokeData;
-	}
-
+	// if (customUrl === '?offset=NaN&limit=20') {
+	// 	useEffect(() => {
+	// 		setPokeData('pageErr');
+	// 	}, [customUrl]);
+	// }
+	// console.log(customUrl);
 	useEffect(() => {
 		fetch(`${baseUrl}${customUrl}`)
 			.then((res) => res.json())
 			.then((data) => setPokeData(data))
 			.catch((err) => setPokeData(err));
+
+		if (customUrl === '?offset=NaN&limit=20') {
+			setPokeData('pageErr');
+		}
 	}, [currentPage, customUrl]);
 	return pokeData;
 };

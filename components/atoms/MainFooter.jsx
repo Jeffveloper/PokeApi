@@ -1,5 +1,3 @@
-import React from 'react';
-
 const MainFooter = () => {
 	return (
 		<footer className="bg-poke-gray1 w-full max-w-screen bottom-0">

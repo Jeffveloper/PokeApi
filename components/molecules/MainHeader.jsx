@@ -1,4 +1,3 @@
-import React from 'react';
 import FormHeader from '../atoms/FormHeader';
 import LogoHeader from '../atoms/LogoHeader';
 

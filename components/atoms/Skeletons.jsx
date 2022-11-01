@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import invisibleImg from '/public/img/unknown-pokemon.png';
 
 export const CardSkeleton = () => {
 	return (
@@ -7,7 +6,7 @@ export const CardSkeleton = () => {
 			<div className="flex items-center max-h-[298px] justify-center h-full min-h-[174px]">
 				<Image
 					className={'opacity-0 w-full p-2 max-w-xs'}
-					src={invisibleImg}
+					src="/img/unknown-pokemon.png"
 					width="200"
 					height="200"
 					alt="Pokemon image"

@@ -1,6 +1,3 @@
-import React from 'react';
-import Logo from '/public/img/siteLogo.png';
-import Icon from '/public/img/siteIcon.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,14 +8,15 @@ const LogoHeader = () => {
 			className="relative w-fit hover:scale-105 transition-all"
 		>
 			<Image
-				src={Logo}
+				src="/img/siteLogo.png"
 				alt="Pokeapi Logo"
 				width="104"
 				height="42"
-				className="drop-shadow-md"
+				className="drop-shadow-md h-auto w-auto"
+				priority={true}
 			/>
 			<Image
-				src={Icon}
+				src="/img/siteIcon.png"
 				alt="Pokeapi Icon"
 				width="25"
 				height="25"

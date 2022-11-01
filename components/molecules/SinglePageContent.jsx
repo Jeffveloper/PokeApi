@@ -13,16 +13,17 @@ const SinglePageContent = () => {
 
 	const pokeData = useGetPokeData(customUrl);
 
-	if (!pokeData || isArrayEmpty(pokeData)) {
-		return <LoadingScreen />;
-	}
+	console.log(pokeData);
 	if (pokeData === 'pageErr') {
 		return <NotFound message="Maybe they hid in the bushes" />;
+	}
+	if (!pokeData || isArrayEmpty(pokeData)) {
+		return <LoadingScreen />;
 	}
 	return (
 		<>
 			<div className="px-3 py-5 grid grid-cols-2 md:grid-cols-4 gap-4">
-				{pokeData.results.map((poke) => (
+				{pokeData?.results.map((poke) => (
 					<PokeCard key={poke.name} pokeUrl={poke.url} />
 				))}
 			</div>
