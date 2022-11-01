@@ -1,26 +1,88 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.globalStyles {
+	@apply text-poke-dark1 font-Manrope;
+}
+.debug {
+	@apply border-red-500;
+}
+.card__tittle {
+	@apply text-base font-semibold leading-6;
+}
+.card__text {
+	@apply text-sm font-normal leading-6;
+}
+.progress::-webkit-progress-value {
+	background: #ef5350;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	@apply scroll-smooth bg-poke-dark1;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.background-poke-type-normal {
+	@apply !bg-type-normal;
+}
+.background-poke-type-fighting {
+	@apply !bg-type-fighting;
+}
+.background-poke-type-flying {
+	@apply !bg-type-flying;
+}
+.background-poke-type-poison {
+	@apply !bg-type-poison;
+}
+.background-poke-type-ground {
+	@apply !bg-type-ground;
+}
+.background-poke-type-rock {
+	@apply !bg-type-rock;
+}
+.background-poke-type-bug {
+	@apply !bg-type-bug;
+}
+.background-poke-type-ghost {
+	@apply !bg-type-ghost;
+}
+.background-poke-type-steel {
+	@apply !bg-type-steel;
+}
+.background-poke-type-fire {
+	@apply !bg-type-fire;
+}
+.background-poke-type-water {
+	@apply !bg-type-water;
+}
+.background-poke-type-grass {
+	@apply !bg-type-grass;
+}
+.background-poke-type-electric {
+	@apply !bg-type-electric;
+}
+.background-poke-type-psychic {
+	@apply !bg-type-psychic;
+}
+.background-poke-type-ice {
+	@apply !bg-type-ice;
+}
+.background-poke-type-dragon {
+	@apply !bg-type-dragon;
+}
+.background-poke-type-dark {
+	@apply !bg-type-dark;
+}
+.background-poke-type-fairy {
+	@apply !bg-type-fairy;
+}
+.background-poke-type-unknown {
+	@apply !bg-type-unknown;
+}
+.background-poke-type-shadow {
+	@apply !bg-type-shadow;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.text-shadow {
+	text-shadow: 0 2px 4px rgb(38, 50, 56);
 }
