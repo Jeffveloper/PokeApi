@@ -8,3 +8,5 @@ export const DataContainer = ({ children, title }) => {
 		</div>
 	);
 };
+
+export const CardContainer = () => {};

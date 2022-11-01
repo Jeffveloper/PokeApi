@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import image from '/public/img/siteIcon.png';
+import loadingImg from '/public/img/siteIcon.png';
 
-export const LoadingScreen = () => {
+export const LoadingScreen = ({ height }) => {
 	return (
-		<div className="flex flex-col items-center justify-center gap-5 bg-poke-dark1 w-full h-screen">
+		<div className="flex flex-col items-center justify-center gap-5 bg-poke-dark1$ w-full h-screen">
 			<Image
-				src={image}
+				src={loadingImg}
 				alt="Pokeball rotating"
 				width="50"
 				height="50"

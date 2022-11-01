@@ -19,7 +19,7 @@
 }
 
 body {
-	@apply scroll-smooth bg-poke-dark1;
+	@apply scroll-smooth bg-card-bg1;
 }
 
 .background-poke-type-normal {

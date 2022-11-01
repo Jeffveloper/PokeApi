@@ -12,8 +12,8 @@ const FormHeader = () => {
 	};
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
-		// navigateSearch('/pokemon/' + value);
-		router.push('/pokemon/' + value);
+		setValue('');
+		value !== '' && router.push('/pokemon/' + value);
 	};
 
 	return (
@@ -27,6 +27,7 @@ const FormHeader = () => {
 					name="name"
 					onChange={handleOnChange}
 					className="px-2 py-1 border-poke-dark1 border-r outline-0"
+					value={value}
 				/>
 			</label>
 			<input

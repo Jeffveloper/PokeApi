@@ -6,7 +6,7 @@ export const NotFound = ({
 	message = 'oops!, parece que no se encontro lo que buscabas',
 }) => {
 	return (
-		<div className="flex flex-col items-center justify-center gap-5 bg-poke-dark1 w-full h-screen">
+		<div className="flex flex-col items-center justify-center gap-5 w-full h-screen">
 			<Image
 				src={NotFoundImage}
 				alt="Pokeapi Icon"
