@@ -7,7 +7,7 @@ const CurrentPageProvider = ({ children }) => {
 	const pageId = useRouter().query.id;
 
 	// const pageIdentifier = useRouter().asPath.slice(0, 6);
-	// const [currentSearch, setCurrentSearch] = useState('');
+	const [currentSearch, setCurrentSearch] = useState('');
 
 	useEffect(() => {
 		setCurrentPageId(parseInt(pageId));

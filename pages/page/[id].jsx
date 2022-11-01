@@ -4,17 +4,19 @@ import PokeCard from '../../components/atoms/PokeCard';
 import { LoadingScreen } from '../../components/atoms/LoadingScreen';
 
 import useGetPokeData from '../../hooks/useGetPokeData';
-import { useCurrentPageContext } from '../../context/currentPage.context';
 import { useRouter } from 'next/router';
+import { NotFound } from '../../components/atoms/NotFound';
+// import { useCurrentPageContext } from '../../context/currentPage.context';
 
 const SinglePageList = () => {
-	const pageId = useRouter().query.id;
 	// const { currentPageId } = useCurrentPageContext();
-	console.log(pageId);
+	const pageId = useRouter().query.id;
 
 	const customUrl = `?offset=${(pageId - 1) * 20}&limit=20`;
 	const pokeData = useGetPokeData(customUrl);
-
+	if (pokeData === 'pageErr') {
+		return <NotFound message="Pagina no encontrada" />;
+	}
 	if (!pokeData) {
 		return <LoadingScreen />;
 	}

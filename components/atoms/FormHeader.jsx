@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 // import { useNavigate } from 'react-router-dom';
 
 const FormHeader = () => {
 	const [value, setValue] = useState('');
 	// let navigateSearch = useNavigate();
+	const router = useRouter();
 
 	const handleOnChange = (e) => {
 		setValue(e.target.value);
@@ -11,6 +13,7 @@ const FormHeader = () => {
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
 		// navigateSearch('/pokemon/' + value);
+		router.push('/pokemon/' + value);
 	};
 
 	return (
