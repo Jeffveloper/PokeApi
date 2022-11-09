@@ -44,10 +44,23 @@ export const RadarPokemonStats = ({ stats }) => {
 			},
 		],
 	};
+	const options = {
+		cutout: '80%',
+		scales: {
+			r: {
+				min: 0,
+			},
+		},
+		plugins: {
+			legend: {
+				display: false,
+			},
+		},
+	};
 
 	return (
 		<>
-			<Radar data={radarData} />
+			<Radar data={radarData} options={options} />
 		</>
 	);
 };
