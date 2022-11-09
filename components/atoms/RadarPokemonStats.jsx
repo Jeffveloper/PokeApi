@@ -49,6 +49,7 @@ export const RadarPokemonStats = ({ stats }) => {
 		scales: {
 			r: {
 				min: 0,
+				max: 200,
 			},
 		},
 		plugins: {

@@ -6,12 +6,6 @@ const useGetPokeData = (customUrl) => {
 	const { currentPage } = useCurrentPageContext();
 	const [pokeData, setPokeData] = useState([]);
 
-	// if (customUrl === '?offset=NaN&limit=20') {
-	// 	useEffect(() => {
-	// 		setPokeData('pageErr');
-	// 	}, [customUrl]);
-	// }
-	// console.log(customUrl);
 	useEffect(() => {
 		fetch(`${baseUrl}${customUrl}`)
 			.then((res) => res.json())
